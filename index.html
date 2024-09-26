@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./custom.css">
+        <title>DreamTravel Recommendation</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-home"></i> DreamTravel Recommendation
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" onclick="showSection('home')">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" onclick="showSection('about')">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" onclick="showSection('contact')">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-2" type="search" id="keyword" placeholder="Search..." aria-label="Search" required oninput="handleInput()">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="button" onclick="fetchRecommendations()">Search</button>
+                        <button class="btn btn-outline-light my-2 my-sm-0 ml-2" type="button" onclick="resetRecommendations()">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="section active" id="home">
+            <div class="container text-center">
+                <h2>Make your Dream Trip comes to live</h2>
+                <p>We believe that your dream trip is more than just a journey; it's an experience waiting to unfold. With our guiding principle—“Make Your Dream Trip Come to Life”—we’re dedicated to turning your travel fantasies into unforgettable realities.</p>
+                <p>Imagine strolling through the historic streets of a charming European village, exploring the breathtaking landscapes of remote islands, or savoring authentic cuisine in bustling markets. Whether you’re yearning for an adventurous escape or a serene retreat, we are here to help you design and realize your ideal getaway.</p>
+                <p>Our expert team is committed to curating personalized itineraries that reflect your unique desires and interests. We provide insider tips, destination highlights, and all the necessary resources to ensure that every aspect of your journey is seamless and enjoyable.</p>
+                <p>Join us as we transform your travel dreams into vibrant adventures, creating memories that will last a lifetime. Your dream trip is just a step away—let’s make it come to life together!</p>
+            </div>
+        </div>
+    
+        <div class="section" id="about">
+            <div class="container text-center">
+                <h2>About Us</h2>
+                <p>We are a company dedicated to providing the best services to our customers.</p>
+                <h3>Our Team</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Enzo Katuguiri</h5>
+                                <p class="card-text">Responsible for sponsorship.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Maria Joana</h5>
+                                <p class="card-text">Responsible for international sellings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Robert Junior</h5>
+                                <p class="card-text">Responsible for customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Contact Us</h2>
+                        <p>Get in Touch</p>
+                    </div>
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="Your message here" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container recommendations" id="recommendations" style="display: none;">
+            <h3>Recommended Places</h3>
+            <div id="recommendation-list" class="row"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./travel_recommendation.js"></script>
+    </body>
+</html>

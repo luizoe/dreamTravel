@@ -1,0 +1,33 @@
+body {
+    background-color: #f8f9fa; /* Light background color for the body */
+    color: black; /* Default text color */
+}
+.recommendations {
+    margin-top: 20px;
+}
+.section {
+    display: none; 
+    padding: 50px 0;
+    color: white; /* White text color for sections */
+}
+.active {
+    display: block; /* Show the active section */
+}
+#home {
+    background-image: url('https://www.sandiego.org/-/media/images/sdta-site/articles/about-sd/1800x734/sdta-articles-11917-1800x734-0000s-0000-about-sd.jpg'); /* Replace with your Home image URL */
+    background-size: cover;
+    background-position: center;
+}
+#about {
+    background-image: url('https://www.advantour.com/img/japan/images/tokyo.jpg'); /* Replace with your About image URL */
+    background-size: cover;
+    background-position: center;
+}
+#contact {
+    background-image: url('https://singularityhub.com/uploads/2018/04/sao-paulo-octavio-frias-de-oliveira-bridge-brazil-latin-america-153080222.jpg'); /* Replace with your Contact image URL */
+    background-size: cover;
+    background-position: center;
+}
+.card {
+    margin: 10px;
+}
